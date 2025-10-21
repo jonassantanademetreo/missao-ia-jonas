@@ -73,11 +73,21 @@ const perguntas = [
 ];
 let atual = 0;
 let perguntaAtual;
-    function mostraPergunta(){
+let historiaFinal="";
+
+if (atual >=perguntas.length){
+    mostraResultado();
+    return
+}
+
+
+    function mostraPergunta(){ 
+        for()
         perguntaAtual = perguntas[atual]
         caixasPerguntas.textContent = perguntaAtual.enunciado;
 mostraAlternativas();
     }
+
     function mostraAlternativas(){
         for (const alternativa of perguntaAtual.alternativas){
             const botaoAlternativas = document.createElement("button");
@@ -87,6 +97,7 @@ mostraAlternativas();
         }
         }
     }
+    
     function respostaSelecionada(opcaoSelecionada){
         const afirmacoes = opcaoSelecionada.afirmacao;
         historia += afirmacoes+"";
